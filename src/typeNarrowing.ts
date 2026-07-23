@@ -53,7 +53,28 @@ function isChaiOrder(obj: any): obj is chaiOrder {
   );
 }
 
-function serveChai(item:chaiOrder | number) {
-    if (isChaiOrder(item)) return `serving ${item.type} with sugar: ${item.sugar}`;
-    return `custom chai is: ${item}`
+function serveChai(item: chaiOrder | number) {
+  if (isChaiOrder(item))
+    return `serving ${item.type} with sugar: ${item.sugar}`;
+  return `custom chai is: ${item}`;
+}
+
+type masalaChai = { type: "masala"; spicelevel: number };
+type gingerChai = { type: "ginger"; amount: number };
+type elaichiChai = { type: "elaichi"; amount: number };
+
+type chai = masalaChai | gingerChai | elaichiChai;
+
+function makeChai(chai: chai) {
+  switch (chai.type) {
+    case "masala":
+      return `it is ${chai} chai`;
+      break;
+    case "ginger":
+      return `it is ${chai} chai`;
+      break;
+    case "elaichi":
+      return `it is ${chai} chai`;
+      break;
+  }
 }
