@@ -1,4 +1,5 @@
 type Role = "admin" | "user" | "ceo";
+// this type is also called literal types
 
 function redirect(role: Role): void {
   if (role === "admin") return console.log(`its ${role}`);
