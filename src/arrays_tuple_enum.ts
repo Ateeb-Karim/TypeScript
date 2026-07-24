@@ -37,7 +37,7 @@ const arr5: number[][] = [[1], [2], [3]];
 
 const arr6: readonly string[] = ["ateeb", "karim"];
 
-//---*----
+// ----**----
 
 // we can add multiple values to an array like string first and number second
 
@@ -59,8 +59,13 @@ enum choices {
   LARGE = "large",
 }
 
-function makeChoices(choice:choices):void{
-  console.log(choice)
+function makeChoices(choice: choices): void {
+  console.log(choice);
 }
 
-makeChoices(choices.LARGE)
+// makeChoices(choices.LARGE)
+
+// we often avoid this enum because it add some incremental values to the variables
+//so instead we use
+
+type options = "small" | "medium" | "large";
