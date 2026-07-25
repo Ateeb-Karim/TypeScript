@@ -40,3 +40,18 @@ const id: user2<number> = {
   username: 10,
 };
 
+// real life example
+
+interface resp<resp> {
+  response: number;
+  data: resp;
+}
+
+const apiResponse: resp<{ username: string; id: number; skill: string }> = {
+  response: 200,
+  data: {
+    username: "ateeb",
+    id: 1,
+    skill: "javaScript",
+  },
+};
